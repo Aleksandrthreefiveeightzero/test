@@ -1,0 +1,32 @@
+version: '3,1'
+
+services:
+
+  mysql:
+    image: mariadb:10.6.4-focal
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=example username
+      - MYSQL_PASSWORD=example password
+    container_name: mysql
+    volumes:
+      - db:/var/lib/mysql
+      
+  wordpress:
+    image: wordpress:5.5.3-php7.2
+    ports:
+      - 80:80
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_USER=example username
+      - WORDPRESS_DB_PASSWORD=example password
+      - WORDPRESS_DB_NAME=wordpress
+    container_name: wordpress
+    volumes:
+      - ./wordpress:/var/www/html
+
+volumes:
+  db:
