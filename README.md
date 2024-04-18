@@ -9,7 +9,7 @@
   <p>1) Install Wsl. Link https://learn.microsoft.com/en-us/windows/wsl/install. Try to use Ubuntu-20.04 distro. Wsl starts with command "wsl".</p>
   <p>2) Install Docker. Link https://docs.docker.com/engine/install/ubuntu.</p>
   <p>3) Install Git. Link https://git-scm.com/book/en/v2/Getting-Started-Installing-Git.</p>
-  <p>4) Download repo. Go to linux user home directory, use command "cd". Use command "git clone https://github.com/Aleksandrthreefiveeightzero/test.git projects/wordpress_site_local".</p>
+  <p>4) Download repo. Go to linux user home directory, use command "cd". Use command "git clone <a style="text-decoration:none; pointer-events:none; href="#">https://github.com/Aleksandrthreefiveeightzero/test.git</a> projects/wordpress_site_local".</p>
   <p>5) Start Docker. use command "sudo dockerd".</p>
   <p>6) Start YML file. Open new linux terminal. Go to new directory projects/wordpress_site_local. Use command "sudo docker compose build", then use command "sudo docker compose up".</p>
   <p>7) Insert custom theme. Use command "sudo cp -RT wp-content wordpress/wp-content".</p>
